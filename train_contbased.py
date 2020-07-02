@@ -14,7 +14,7 @@ def datapreprocessing():
     # spliting the genres
     movies['keyWords'] = movies['genres'].str.replace('|', ' ')
   
-    return movies[:20000]
+    return movies[:5000]
 def content_model():
     # initializing the empty list of recommended movies
     data = datapreprocessing()
