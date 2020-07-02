@@ -14,10 +14,9 @@ def datapreprocessing():
     # spliting the genres
     movies['keyWords'] = movies['genres'].str.replace('|', ' ')
   
-    return movies
+    return movies[:30000]
 def content_model():
     # initializing the empty list of recommended movies
-    recommended_movies = []
     data = datapreprocessing()
     # instantiating and generating the count matrix
     count_vec = CountVectorizer()
