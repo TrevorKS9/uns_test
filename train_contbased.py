@@ -23,7 +23,7 @@ def content_model():
     count_vec = CountVectorizer()
     count_matrix = count_vec.fit_transform(data['keyWords'])
     indices = pd.Series(data['title'])
-    return pickle.dump(cosine_similarity(count_matrix, count_matrix,dtype='uint8'), open(save_path,'wb'))
+    return pickle.dump(cosine_similarity(count_matrix, count_matrix), open('matrix.pkl','wb'))
 content_model()
     
     
